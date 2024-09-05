@@ -1,96 +1,32 @@
 .gallery-box {
     padding: 24px 156px;
 }
-
+ul,ol {
+    list-style: none;
+    text-decoration: none;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
 .gallery {
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    list-style: none;
     justify-content: center;
 }
-
-.gallery-item {
-    width: 360px;
-    height: 200px;
-    box-sizing: border-box;
-}
-
 .gallery-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
+.gallery-item {
+    width: 360px;
+    height: 200px;
+    box-sizing: border-box;
+}
 .gallery-item:hover .gallery-image {
-    transform: scale(1.01);
-    transition: transform 0.4s ease;
+    transform: scale(1.1);
+    transition: transform 3000ms ease;
 }
-
-.basicLightbox {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    opacity: 0.01;
-    transition: opacity 0.4s ease;
-    z-index: 1000;
-    will-change: opacity;
-}
-
-.basicLightbox--visible {
-    opacity: 1;
-}
-
-.basicLightbox__placeholder {
-    max-width: 100%;
-    transform: scale(0.9);
-    transition: transform 0.4s ease;
-    z-index: 1;
-    will-change: transform;
-}
-
-.basicLightbox__placeholder>iframe,
-.basicLightbox__placeholder>img,
-.basicLightbox__placeholder>video {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    max-width: 95%;
-    max-height: 95%;
-}
-
-.basicLightbox__placeholder>iframe,
-.basicLightbox__placeholder>video {
-    pointer-events: auto;
-}
-
-.basicLightbox__placeholder>img,
-.basicLightbox__placeholder>video {
-    width: auto;
-    height: auto;
-}
-
-.basicLightbox--iframe .basicLightbox__placeholder,
-.basicLightbox--img .basicLightbox__placeholder,
-.basicLightbox--video .basicLightbox__placeholder {
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.basicLightbox--visible .basicLightbox__placeholder {
-    transform: scale(1);
-}
-
